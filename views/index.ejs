@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HEY</h1>
+    <h2>welcome to the site</h2>
+    <h3>the messaging site</h3>
+    <h4>make an account, login, post a message</h4>
+    <hr>
+        <a href="/createUser">Create an account</a> | 
+        <a href="/login">Login</a> | 
+        <a href="/message">post a message</a> | 
+    <hr>
+
+    <h2>Messages</h2>
+
+    <% for (let message of locals.messages) { %> 
+        <div>
+            <%= message.dataValues.content %> 
+         
+        </div>
+        <!-- <IMG id = "Like" SRC="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F766526799068567937%2F&psig=AOvVaw27-tEyuiIOhhRJrz2VYe_L&ust=1618644649833000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKio4bGfgvACFQAAAAAdAAAAABAD"> -->
+       <!-- <div ID= "like" >like</div>
+            <div id="score" class="innerText">0</div> -->
+
+
+            <form action="/like" method="POST">
+
+                <button>Likes <%=message.dataValues.count %></button>
+            </form>
+
+    <% } %>
+
+    
+<script>
+
+        // let lik = document.querySelector('#like');
+        // let scor = document.querySelector('#score')
+
+		// let handler = function(){
+		// 	let new_score = parseInt(scor.innerText) + 1
+		// 	score.innerText = new_score
+		// }
+
+		// lik.addEventListener("click", handler)
+
+
+        //     cat_three.addEventListener("click", function(event){
+		// 	let url = model.cat_map[event.target.id]
+		// 	main.src = url
+		// })
+
+</script>
+</body>
+</html>
